@@ -5,6 +5,7 @@ use crate::memory::errors::MemoryError;
 pub enum CPUError {
     Memory(MemoryError),
     Decode(DecodeError),
+    InvalidRegister(usize),
 }
 
 impl From<MemoryError> for CPUError {

@@ -1,5 +1,3 @@
-use std::default;
-
 use crate::{
     cpu::errors::CPUError,
     decoder::decode,
@@ -8,6 +6,7 @@ use crate::{
 };
 
 mod errors;
+mod exec;
 mod tests;
 
 pub type StepResult = Instruction;
