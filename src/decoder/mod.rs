@@ -1,4 +1,4 @@
-mod errors;
+pub mod errors;
 mod tests;
 
 use crate::itxs::Instruction;
