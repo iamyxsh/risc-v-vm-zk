@@ -1,7 +1,7 @@
 pub mod errors;
 pub mod tests;
 
-use crate::constants::MAX_MEMORY_SIZE;
+use crate::constants::{DEFAULT_MEMORY_SIZE, MAX_MEMORY_SIZE};
 use errors::MemoryError;
 
 #[derive(Debug)]
@@ -24,7 +24,7 @@ impl Memory {
         })
     }
 
-    pub fn size(self: &Self) -> usize {
+    pub fn size(&self) -> usize {
         self.size
     }
 
@@ -95,5 +95,11 @@ impl Memory {
         }
         self.data[addr] = value;
         Ok(())
+    }
+}
+
+impl Default for Memory {
+    fn default() -> Self {
+        Memory::new(DEFAULT_MEMORY_SIZE).unwrap()
     }
 }

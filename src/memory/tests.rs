@@ -1,6 +1,7 @@
+use crate::constants::DEFAULT_MEMORY_SIZE;
+
 use super::*;
 
-const DEFAULT_MEMORY_SIZE: usize = 128;
 const DEFAULT_OOB_ADDR: usize = 129;
 const DEFAULT_UNALIGNED_ADDR: usize = 2;
 
@@ -9,7 +10,7 @@ const DEFAULT_BYTE_TO_STORE: u8 = 0xAB;
 const DEFAULT_WORD_TO_STORE: u32 = 0x1234_5678;
 
 fn return_mem() -> Memory {
-    Memory::new(DEFAULT_MEMORY_SIZE).unwrap()
+    Memory::default()
 }
 
 #[test]
