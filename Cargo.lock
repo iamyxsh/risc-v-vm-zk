@@ -306,6 +306,9 @@ dependencies = [
 [[package]]
 name = "smart_contract"
 version = "0.1.0"
+dependencies = [
+ "smart_contract_sdk",
+]
 
 [[package]]
 name = "smart_contract_sdk"

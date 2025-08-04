@@ -1,19 +1,17 @@
-use smart_contract_sdk::contract_module;
+use smart_contract_sdk::contract;
 
-#[contract_module]
-mod contract {
-    use smart_contract_sdk::{entrypoint, tx, view};
-
+#[contract]
+mod my_contract {
     #[entrypoint]
-    fn init() {}
+    pub fn init() {}
 
     #[view]
-    fn get_value(x: u32) -> u32 {
+    pub fn get_value(x: u32) -> u32 {
         x
     }
 
     #[tx]
-    fn set_value(x: u32) {
+    pub fn set_value(x: u32) {
         let _ = x;
     }
 }
