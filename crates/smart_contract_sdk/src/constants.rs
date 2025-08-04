@@ -1,0 +1,1 @@
+pub const CONSTRUCTOR_SELECTOR: u32 = 0;
